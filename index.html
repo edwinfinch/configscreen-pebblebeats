@@ -95,14 +95,14 @@ Website version: 0.1.0<br><br>
       $().ready(function() {
        if (typeof window.localStorage !== "undefined") {
        	console.log("Not undefined :)");
-        if (window.localStorage.pebble_drunkoclock_options) {
-          ls_pto = JSON.parse(window.localStorage.pebble_drunkoclock_options);
+        if (window.localStorage.pebble_beats_options) {
+          ls_pto = JSON.parse(window.localStorage.pebble_beats_options);
           // the Pebble webview dies on the next line...
-          $("input[name=key0][id=key0-"+ls_pto["theme"]+"]").prop('checked',true);
+          $("input[name=key0][id=key0-"+ls_pto["timezone"]+"]").prop('checked',true);
           $("input[name=key0]").checkboxradio('refresh');
-          $("input[name=key1][id=key1-"+ls_pto["theme"]+"]").prop('checked',true);
+          $("input[name=key1][id=key1-"+ls_pto["timeenabled"]+"]").prop('checked',true);
           $("input[name=key1]").checkboxradio('refresh');
-          $("input[name=key2][id=key2-"+ls_pto["theme"]+"]").prop('checked',true);
+          $("input[name=key2][id=key2-"+ls_pto["dateenabled"]+"]").prop('checked',true);
           $("input[name=key3]").checkboxradio('refresh');
         }
        }
@@ -116,7 +116,7 @@ Website version: 0.1.0<br><br>
 
           ls_pto = JSON.stringify(saveOptions());
           if (typeof window.localStorage !== "undefined") {
-            window.localStorage.pebble_drunkoclock_options = ls_pto;
+            window.localStorage.pebble_beats_options = ls_pto;
           }
           var location = "pebblejs://close#" + encodeURIComponent(ls_pto);
           console.log("Warping to: " + location);
