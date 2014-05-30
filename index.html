@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Drunk O' Clock</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.css" />
+    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.js"></script>
+    //Analytics to go here
+  </head>
+  <body>
+    <div data-role="page" id="main">
+      <div data-role="header" class="jqm-header">
+        <h1>.beats</h1>
+      </div>
+
+      <div data-role="content">
+
+<div data-role="collapsible-set" data-theme="c" data-content-theme="d" data-mini="false">
+    <div data-role="collapsible">
+        <h3>Timezone</h3>
+
+<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+    <legend>Theme</legend>
+        <input name="key0" id="key0-4" data-type="int" value="4" checked="checked" type="radio">
+        <label for="key0-4">Eastern (EST) +5</label>
+</fieldset>
+
+
+    </div>
+<div data-role="collapsible">
+        <h3>Date/Time</h3>
+<fieldset data-role="controlgroup" data-mini="true">
+    <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+    <legend>Seconds</legend>
+    <i>Seconds will show up in the top right corner of the screen.</i>
+	<input name="key4" id="key4-4" value="4" checked="checked" type="radio">
+        <label for="key4-4">Off</label>
+        <input name="key4" id="key4-5" value="5" type="radio">
+        <label for="key4-5">On</label>
+</fieldset>
+
+</div>
+
+   
+    <div data-role="collapsible">
+        <h3>Information and Support</h3>
+<p>Newest watchface version: 0.2.0 alpha-b.2 <br><br>
+Website version: 0.1.0<br><br>
+<b>Credits:</b><br> Edwin Finch - Lead developer<br><br>
+<i>www.edwinfinch.com/pebble/ see all my projects</i><br><br>
+
+
+<b><i>SUPPORT</i></b><br>
+<p>
+	Please email me: contact@edwinfinch.com or post on the beta community:
+	http://bit.ly/edwinsbetas
+</p>
+</p>
+
+</p>
+</fieldset>
+    </div>
+</div>
+<br />
+        <div class="ui-body ui-body-c">
+          <fieldset class="ui-grid-a">
+              <div class="ui-block-a"><button type="submit" data-theme="d" id="b-cancel">Cancel</button></div>
+              <div class="ui-block-b"><button type="submit" data-theme="a" id="b-submit">Save</button></div>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+    <script>
+      function saveOptions() {
+        var options = {
+          'timezone':     Number( $("input[name=key0]:checked").val() ),
+          	  
+        }
+        return options;
+      }
+
+      $().ready(function() {
+       if (typeof window.localStorage !== "undefined") {
+       	console.log("Not undefined :)");
+        if (window.localStorage.pebble_drunkoclock_options) {
+          ls_pto = JSON.parse(window.localStorage.pebble_drunkoclock_options);
+          // the Pebble webview dies on the next line...
+          $("input[name=key0][id=key0-"+ls_pto["theme"]+"]").prop('checked',true);
+          $("input[name=key0]").checkboxradio('refresh');
+        }
+       }
+        $("#b-cancel").click(function() {
+          console.log("Cancel");
+          document.location = "pebblejs://close";
+        });
+
+        $("#b-submit").click(function() {
+          console.log("Submit");
+
+          ls_pto = JSON.stringify(saveOptions());
+          if (typeof window.localStorage !== "undefined") {
+            window.localStorage.pebble_drunkoclock_options = ls_pto;
+          }
+          var location = "pebblejs://close#" + encodeURIComponent(ls_pto);
+          console.log("Warping to: " + location);
+          console.log(location);
+          document.location = location;
+        });
+
+      });
+    </script>
+  </body>
+</html>
