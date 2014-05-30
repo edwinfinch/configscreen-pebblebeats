@@ -15,11 +15,11 @@
         <h1>.beats</h1>
       </div>
 
-      <div data-role="content">
+<div data-role="content">
 
 <div data-role="collapsible-set" data-theme="c" data-content-theme="d" data-mini="false">
     <div data-role="collapsible">
-        <h3>Time</h3>
+        <h3>.beats</h3>
 
 <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
     <legend>Timezone</legend>
@@ -28,7 +28,31 @@
 </fieldset>
 
 
-    </div>
+</div>
+   <div data-role="collapsible">
+        <h3>.beats</h3>
+
+<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+    <legend>Show actual time</legend>
+    	<input name="key1" id="key1-1" data-type="int" value="1" checked="checked" type="radio">
+        <label for="key1-1">True</label>
+        <input name="key1" id="key1-0" data-type="int" value="0" checked="checked" type="radio">
+        <label for="key1-0">False</label>
+</fieldset>
+
+<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+    <legend>Show date</legend>
+    	<input name="key2" id="key2-2" data-type="int" value="2" checked="checked" type="radio">
+        <label for="key2-2">DD/MM</label>
+    	<input name="key2" id="key2-1" data-type="int" value="1" checked="checked" type="radio">
+        <label for="key2-1">MM/DD</label>
+        <input name="key2" id="key2-0" data-type="int" value="0" checked="checked" type="radio">
+        <label for="key2-0">Off</label>
+</fieldset>
+
+
+  </div>
+   
    
     <div data-role="collapsible">
         <h3>Information and Support</h3>
@@ -62,7 +86,8 @@ Website version: 0.1.0<br><br>
       function saveOptions() {
         var options = {
           'timezone':     Number( $("input[name=key0]:checked").val() ),
-          	  
+          'timeenabled':     Number( $("input[name=key1]:checked").val() ),
+          'dateenabled':     Number( $("input[name=key2]:checked").val() ),
         }
         return options;
       }
@@ -75,6 +100,10 @@ Website version: 0.1.0<br><br>
           // the Pebble webview dies on the next line...
           $("input[name=key0][id=key0-"+ls_pto["theme"]+"]").prop('checked',true);
           $("input[name=key0]").checkboxradio('refresh');
+          $("input[name=key1][id=key1-"+ls_pto["theme"]+"]").prop('checked',true);
+          $("input[name=key1]").checkboxradio('refresh');
+          $("input[name=key2][id=key2-"+ls_pto["theme"]+"]").prop('checked',true);
+          $("input[name=key3]").checkboxradio('refresh');
         }
        }
         $("#b-cancel").click(function() {
