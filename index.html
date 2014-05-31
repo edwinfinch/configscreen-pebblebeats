@@ -137,7 +137,7 @@ Website version: 0.1.1<br><br>
     <script>
       function saveOptions() {
         var options = {
-          'timezone':     Number( $("input[name=key0]:checked").val() ),
+          'timezone':     $("input[name=key0]:checked").val(),
           'timeenabled':     Number( $("input[name=key1]:checked").val() ),
           'dateenabled':     Number( $("input[name=key2]:checked").val() ),
         }
