@@ -18,6 +18,7 @@
 <div data-role="content">
 
 <div data-role="collapsible-set" data-theme="c" data-content-theme="d" data-mini="false">
+<!--
     <div data-role="collapsible">
         <h3>.beats</h3>
 
@@ -81,6 +82,7 @@
 
 
 </div>
+-->
    <div data-role="collapsible">
         <h3>Date & Time</h3>
 
@@ -137,7 +139,7 @@ Website version: 0.1.1<br><br>
     <script>
       function saveOptions() {
         var options = {
-          'timezone':     $("input[name=key0]:checked").val(),
+          'timezone':     Number( $("input[name=key0]:checked").val() ),
           'timeenabled':     Number( $("input[name=key1]:checked").val() ),
           'dateenabled':     Number( $("input[name=key2]:checked").val() ),
         }
