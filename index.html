@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.css" />
     <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.js"></script>
-    //Analytics to go here
+    <!-- Analytics to go here -->
   </head>
   <body>
     <div data-role="page" id="main">
@@ -139,9 +139,9 @@ Website version: 0.1.1<br><br>
     <script>
       function saveOptions() {
         var options = {
-          
-          
-          
+          'timezone': Number( $("input[name=key0]:checked").val() ),
+          'timeenabled': Number( $("input[name=key1]:checked").val() ),
+          'dateenabled': Number( $("input[name=key2]:checked").val() ),
         }
         return options;
       }
