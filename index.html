@@ -7,7 +7,190 @@
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.css" />
     <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.js"></script>
-    <!-- Analytics to go here -->
+  </head>
+  <body>
+    <div data-role="page" id="main">
+      <div data-role="header" class="jqm-header">
+        <h1>.beats</h1>
+      </div>
+
+      <div data-role="content">
+
+<div data-role="collapsible-set" data-theme="c" data-content-theme="d" data-mini="false">
+    <div data-role="collapsible">
+        <h3>Timezone</h3>
+
+<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+    <legend>Timezone</legend>
+        <input name="key0" id="key0-0" data-type="int" value="0" checked="checked" type="radio">
+        <label for="key0-0">GMT/UTC (+0)</label>
+        <input name="key0" id="key0-1" data-type="int" value="1" type="radio">
+        <label for="key0-1">ECT (+1)</label>
+        <input name="key0" id="key0-2" data-type="int" value="2" type="radio">
+        <label for="key0-2">EET/ART (+2)</label>
+        <input name="key0" id="key0-3" data-type="int" value="3" type="radio">
+        <label for="key0-3">EAT (+3)</label>
+        <input name="key0" id="key0-3.30" data-type="float" value="3.30" type="radio">
+        <label for="key0-3.30">MET (+3:30)</label>
+        <input name="key0" id="key0-4" data-type="int" value="4" type="radio">
+        <label for="key0-4">NET (+4)</label>
+        <input name="key0" id="key0-5" data-type="int" value="5" type="radio">
+        <label for="key0-5">PLT (+5)</label>
+        <input name="key0" id="key0-5.30" data-type="float" value="5.30" type="radio">
+        <label for="key0-5.30">IST (+5:30)</label>
+        <input name="key0" id="key0-6" data-type="int" value="6" type="radio">
+        <label for="key0-6">BST (+6)</label>
+        <input name="key0" id="key0-7" data-type="int" value="7" type="radio">
+        <label for="key0-7">VST (+7)</label>
+        <input name="key0" id="key0-8" data-type="int" value="8" type="radio">
+        <label for="key0-8">CTT (+8)</label>
+        <input name="key0" id="key0-9" data-type="int" value="9" type="radio">
+        <label for="key0-9">JST (+9)</label>
+        <input name="key0" id="key0-9.30" data-type="float" value="9.30" type="radio">
+        <label for="key0-9.30">ACT (+9:30)</label>
+        <input name="key0" id="key0-10" data-type="int" value="10" type="radio">
+        <label for="key0-10">AET (+10)</label>
+        <input name="key0" id="key0-11" data-type="int" value="11" type="radio">
+        <label for="key0-11">SST (+11)</label>
+        <input name="key0" id="key0-12" data-type="int" value="12" type="radio">
+        <label for="key0-12">NST (+12)</label>
+        <input name="key0" id="key0--11" data-type="int" value="-11" type="radio">
+        <label for="key0--11">MIT (-11)</label>
+        <input name="key0" id="key0--10" data-type="int" value="-10" type="radio">
+        <label for="key0--10">HST (-10)</label>
+        <input name="key0" id="key0--9" data-type="int" value="-9" type="radio">
+        <label for="key0--9">AST (-9)</label>
+        <input name="key0" id="key0--8" data-type="int" value="-8" type="radio">
+        <label for="key0--8">PST (-8)</label>
+        <input name="key0" id="key0--7" data-type="int" value="-7" type="radio">
+        <label for="key0--7">PNT/MST (-7)</label>
+        <input name="key0" id="key0--6" data-type="int" value="-6" type="radio">
+        <label for="key0--6">CST (-6)</label>
+        <input name="key0" id="key0--5" data-type="int" value="-5" type="radio">
+        <label for="key0--5">EST/IET (-5)</label>
+        <input name="key0" id="key0--4" data-type="int" value="-4" type="radio">
+        <label for="key0--4">PRT (-4)</label>
+        <input name="key0" id="key0--3.30" data-type="float" value="-3.30" type="radio">
+        <label for="key0--3.30">CNT (-3:30)</label>
+        <input name="key0" id="key0--3" data-type="int" value="-3" type="radio">
+        <label for="key0--3">AGT/BET (-3)</label>
+        <input name="key0" id="key0--1" data-type="int" value="-1" type="radio">
+        <label for="key0--1">CAT (-1)</label>
+</fieldset>
+    </div>
+<div data-role="collapsible">
+        <h3>Date/Time</h3>
+
+<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+    <legend>Show actual time</legend>
+    	<input name="key1" id="key1-1" data-type="int" value="1" checked="checked" type="radio">
+        <label for="key1-1">True</label>
+        <input name="key1" id="key1-0" data-type="int" value="0" checked="checked" type="radio">
+        <label for="key1-0">False</label>
+</fieldset>
+
+<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+    <legend>Show date</legend>
+    	<input name="key2" id="key2-2" data-type="int" value="2" checked="checked" type="radio">
+        <label for="key2-2">DD/MM</label>
+    	<input name="key2" id="key2-1" data-type="int" value="1" checked="checked" type="radio">
+        <label for="key2-1">MM/DD</label>
+        <input name="key2" id="key2-0" data-type="int" value="0" checked="checked" type="radio">
+        <label for="key2-0">Off</label>
+</fieldset>
+</div>
+
+    <div data-role="collapsible">
+        <h3>Information and Support</h3>
+<p>Newest watchface version: 0.2.1 alpha-b.4 <br><br>
+Website version: 0.2.0<br><br>
+<b>Credits:</b><br> Edwin Finch - Lead developer<br><br>
+<i>www.edwinfinch.com/pebble/ see all my projects</i><br><br>
+
+<b><i>SUPPORT</i></b><br>
+<p>Please contact <b>contact@edwinfinch.com</b> if you need any technical support, want to
+	report a bug that you are experiencing, or suggest a feature. I will get back to you 
+	within a day (most likely) and try to fix you ASAP.
+	<br><br>
+	If you want to see the rest of my software, go to www.edwinfinch.com/pebble/.
+	<br><br>
+	If you want to be a beta tester for this watchface or any other software of mine,
+	join the Google+ community by going to the link: http://bit.ly/edwinsbetas
+</p>
+</p>
+
+</p>
+</fieldset>
+    </div>
+</div>
+<br />
+        <div class="ui-body ui-body-c">
+          <fieldset class="ui-grid-a">
+              <div class="ui-block-a"><button type="submit" data-theme="d" id="b-cancel">Cancel</button></div>
+              <div class="ui-block-b"><button type="submit" data-theme="a" id="b-submit">Save</button></div>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+    <script>
+      function saveOptions() {
+        var options = {
+          'timezone':     Number( $("input[name=key0]:checked").val() ),
+	  'timeenabled':     Number( $("input[name=key1]:checked").val() ),
+	  'dateenabled':     Number( $("input[name=key2]:checked").val() ),
+        }
+        return options;
+      }
+
+      $().ready(function() {
+       if (typeof window.localStorage !== "undefined") {
+       	console.log("Not undefined :)");
+        if (window.localStorage.pebble_beats_options) {
+          ls_pto = JSON.parse(window.localStorage.pebble_beats_options);
+          // the Pebble webview dies on the next line...
+          $("input[name=key0][id=key0-"+ls_pto["theme"]+"]").prop('checked',true);
+          $("input[name=key0]").checkboxradio('refresh');
+          $("input[name=key1][id=key1-"+ls_pto["wordpack"]+"]").prop('checked',true);
+          $("input[name=key1]").checkboxradio('refresh');
+          $("input[name=key2][id=key2-"+ls_pto["btdisalert"]+"]").prop('checked',true);
+          $("input[name=key2]").checkboxradio('refresh');
+        }
+       }
+        $("#b-cancel").click(function() {
+          console.log("Cancel");
+          document.location = "pebblejs://close";
+        });
+
+        $("#b-submit").click(function() {
+          console.log("Submit");
+
+          ls_pto = JSON.stringify(saveOptions());
+          if (typeof window.localStorage !== "undefined") {
+            window.localStorage.pebble_beats_options = ls_pto;
+          }
+          var location = "pebblejs://close#" + encodeURIComponent(ls_pto);
+          console.log("Warping to: " + location);
+          console.log(location);
+          document.location = location;
+        });
+
+      });
+    </script>
+  </body>
+</html>
+
+<!--
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>.beats</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.css" />
+    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.js"></script>
+    Analytics to go here 
   </head>
   <body>
     <div data-role="page" id="main">
@@ -182,3 +365,5 @@ Website version: 0.1.1<br><br>
     </script>
   </body>
 </html>
+
+-->
