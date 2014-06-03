@@ -155,8 +155,8 @@ Website version: 0.2.1<br><br>
       $().ready(function() {
        if (typeof window.localStorage !== "undefined") {
        	console.log("Not undefined :)");
-        if (window.localStorage.pebble_beats_options) {
-          ls_pto = JSON.parse(window.localStorage.pebble_beats_options);
+        if (window.localStorage.pebble_beats2_options) {
+          ls_pto = JSON.parse(window.localStorage.pebble_beats2_options);
           // the Pebble webview dies on the next line...
           $("input[name=key0][id=key0-"+ls_pto["timezone"]+"]").prop('checked',true);
           $("input[name=key0]").checkboxradio('refresh');
@@ -178,7 +178,7 @@ Website version: 0.2.1<br><br>
 
           ls_pto = JSON.stringify(saveOptions());
           if (typeof window.localStorage !== "undefined") {
-            window.localStorage.pebble_beats_options = ls_pto;
+            window.localStorage.pebble_beats2_options = ls_pto;
           }
           var location = "pebblejs://close#" + encodeURIComponent(ls_pto);
           console.log("Warping to: " + location);
